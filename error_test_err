@@ -1,0 +1,27 @@
+;
+;config_file 
+;this file works as a configuration file for all the warrior project
+;write here the db information and shit
+;as well if you want to add new modules to the porject and/or scripts
+;for comments jsut add the ";" character\n;for a new variable just put name variable between "[variable_name]" followed by ":'varuable_value';"
+;
+
+[project_name]:'project_name';
+
+[database_module]:'mysql';
+
+[database]:
+	[url]:'localhost';
+	[user_name]:'username';
+	[password]:'password';
+	['db_name']:'db_name';
+[/database];
+
+
+;;;;for new modules
+;[module]:
+;	[module_name]:'module_name';
+;	[module_config]:
+;		[x_config]:'x_config';
+;	[/module_config];
+;[/module];
