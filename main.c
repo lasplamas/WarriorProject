@@ -31,16 +31,23 @@ int main( int argc[], char * argv[] ){
       }
     } else if( !strcmp( argv[1], "model" ) ){
       if( argv[2] != NULL ){
+	printf( "Creating new model...\n" );
 	create_model( argv[2] );
       } else {
-	printf( "Especify models name.\n" );
+	printf( "Especify model name.\n" );
       }
     } else if( !strcmp( argv[1], "controller" ) ){  
-      printf("Controller action.\n");
+      printf("Creating new controller...\n");
     } else if( !strcmp( argv[1], "-h" ) || !strcmp( argv[1], "--help" ) ){
       printf("Help panel.\n");
     } else if( !strcmp( argv[1], "push" ) ){
-      printf( "Pushing to db..." );
+      //The push command is for the pushing and realizing all de database data to de real db lmL
+      printf( "Pushing to db...\n" );
+    } else if( !strcmp( argv[1], "module" ) ){
+      //If there is an existing module of the framework it downloads it and install it in the framework
+      printf( "Downloading new  module...\n" );
+    } else if( !strcmp( argv[1], "view" ) ){
+      printf( "Creating new view...\n" );
     }
 
   }else{

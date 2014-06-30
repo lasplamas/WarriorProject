@@ -50,29 +50,37 @@ void make_directories( char * project_name ){
   mkdir( temp, 0777 );
   printf( "\t\t------Helpers/\n" );
   
-  //style folder
-  strcpy( temp, project_name );
-  strcat( temp, "/style" );
-  mkdir( temp, 0777 );
-  printf( "\t\t------style/\n" );
-
-  //images folder
-  strcat( temp, "/images" );
-  mkdir( temp, 0777 );
-  printf( "\t\t\t------------images/\n" );
-  
   //css folder
   strcpy( temp, project_name );
-  strcat( temp, "/style/css" );
+  strcat( temp, "/css" );
   mkdir( temp, 0777 );
-  printf( "\t\t\t------------css/\n" );
+  printf( "\t\t------css/\n" );
+  
+  //Images folder
+  strcat( temp, "/images" );
+  mkdir( temp, 0777 );
+  printf( "\t\t-----------/images\n" );
 
+  //js folder
+  strcpy( temp, project_name );
+  strcat( temp, "/js" );
+  mkdir( temp, 0777 );
+  printf( "\t\t------js/\n" );
+
+  //fonts folder
+  strcpy( temp, project_name );
+  strcat( temp, "/fonts" );
+  mkdir( temp, 0777 );
+  printf( "\t\t------fonts/\n" );
+  
   //Views folder
   strcpy( temp, project_name );
   strcat( temp, "/Views" );
   mkdir( temp, 0777 );
   printf( "\t\t------Views/\n" );
   printf( "For creating database, edit the config file and type 'push' command.\n" );
+  
+  
 }//End of make_directories Method
 
 /***
