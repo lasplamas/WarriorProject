@@ -14,7 +14,8 @@
 #include "lib.h"
 #include "Models.h" 
 
-
+//Compile command 
+////gcc -o warrior *.c -I /usr/include/mysql/ -lmysqlclient
 /***
  * main()
  * method that performs the nucle of the sistem

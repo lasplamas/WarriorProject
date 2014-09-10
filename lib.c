@@ -184,10 +184,15 @@ void make_directories( char * project_name ){
   copy_file( "Resources/connection.php", temp );
   printf( "\t\t|---------------------->connection.php\n" );
   
+  strcpy( temp, project_name );
+  strcat( temp, "/Warrior/Handlers" );
+  mkdir( temp, 0777 );
+  printf( "\t\t|---------------->Handlers/\n" );
   //Clases Folder
   strcpy( temp, project_name );
   strcat( temp, "/Warrior/Classes" );
   mkdir( temp, 0777 );
+  printf("\t\t|----------------->Classes/\n");
   //Copy model file to warrior folder
   copy_file( "Resources/Model.php", temp );
   printf( "\t\t|---------------------->Model.php\n" );

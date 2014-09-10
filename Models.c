@@ -24,7 +24,7 @@ void create_model( char * model_name ){
   FILE * newModel = fopen( tmp, "ab+" );
 
   fprintf( newModel, "<?php\n\n " );
-  fprintf( newModel, "\tinclude $_SERVER['DOCUMENT_ROOT'].'/Warrior/Model.php';\n\n" );
+  fprintf( newModel, "\trequire_once( $_SERVER['DOCUMENT_ROOT'].'/Warrior/Classes/Model.php' );\n\n" );
   fprintf( newModel, "\t//Class " );
   fprintf( newModel, "%s", model_name );
   fprintf( newModel, " Model\n" );

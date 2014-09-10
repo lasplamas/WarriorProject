@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<configuration>
+	<connection>
+		<url>localhost</url>
+		<user_name>root</user_name>
+		<password>itic123</password>
+		<db_name>db_ramiro</db_name>
+	</connection>
+</configuration>

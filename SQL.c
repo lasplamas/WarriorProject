@@ -71,6 +71,8 @@ int create_table( char * u, char * un, char * p, char * db, char * tbname ){
       if( ends_with( types_array[i], "key" ) ){
 	strcat( query, " NOT NULL AUTO_INCREMENT PRIMARY KEY" );
       }
+    }else if( !strcmp( types_array[i], "decimal" ) ){
+      strcat( query, "DOUBLE" );
     }else if( !strcmp( types_array[i], "string" ) ){
       strcat( query, "VARCHAR(100)" );
     }else if( !strcmp( types_array[i], "text" ) ){
@@ -120,7 +122,13 @@ int starts_with( const char * a, const char * b ){
   return 0;
 }//End of starts_with method
 
-
+/***
+ * ends_with
+ * Method that verifies if a string ends with something
+ * @param const char * a, the complete string
+ * @param const char * b, the end string
+ * @return int - 0 if false 1 if true
+ **********************************************/
 int ends_with( const char * a, const char * b ){
 
   if (!a || !b)
@@ -169,6 +177,8 @@ void save_procedure( char * model_name, MYSQL * conn ){
 
       if( starts_with( types_array[i], "int" ) ){
 	strcat( query, " INT(10)" );
+      }else if( !strcmp( types_array[i], "decimal" ) ){
+	strcat( query, " DOUBLE" );
       }else if( !strcmp( types_array[i], "string" ) ){
 	strcat( query, " VARCHAR(100)" );
       }else if( !strcmp( types_array[i], "text" ) ){

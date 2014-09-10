@@ -10,7 +10,7 @@
 	[url]:'localhost';
 	[user_name]:'root';
 	[password]:'itic123';
-	[db_name]:'db_name_blah';
+	[db_name]:'db_ramiro';
 [/database];
 
 
